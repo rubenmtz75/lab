@@ -59,7 +59,7 @@ class Television:
 
     def __str__(self) -> str:
         """
-        Return statement to provide power status, current channel, current volume.
+        Return statement which provides: power status, current channel, current volume.
         """
         return 'TV status: Is on = ' + str(self.__status) + ', Channel = ' + str(self.__channel) + ', Volume = ' + str(
             self.__volume)
