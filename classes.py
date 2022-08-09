@@ -30,16 +30,22 @@ class Television:
         Method to change the channel up.
         :return: Current channel plus 1.
         """
-        if self.__status == True and self.__channel < self.MAX_CHANNEL:
-            self.__channel += 1
+        if self.__status == True:
+            if self.__channel == self.MAX_CHANNEL:
+                self.__channel = self.MIN_CHANNEL
+            else:
+                self.__channel += 1
 
     def channel_down(self) -> None:
         """
         Method to change the channel down.
         :return: Current channel minus 1.
         """
-        if self.__status == True and self.__channel > self.MAX_CHANNEL:
-            self.__channel -= 1
+        if self.__status == True:
+            if self.__channel == self.MIN_CHANNEL:
+                self.__channel = self.MAX_CHANNEL
+            else:
+                self.__channel -= 1
 
     def volume_up(self) -> None:
         """
