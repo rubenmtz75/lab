@@ -63,7 +63,7 @@ class Television:
         if self.__status == True and self.__volume > self.MIN_VOLUME:
             self.__volume -= 1
 
-    def __str__(self) -> str:
+    def __str__(self: str) -> str:
         """
         Return statement which provides: power status, current channel, current volume.
         """
